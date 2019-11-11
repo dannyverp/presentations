@@ -1,0 +1,101 @@
+/**
+ * Solarized Light theme for reveal.js.
+ * Author: Achim Staebler
+ */
+@import "~reveal.js/css/reset.css";
+@import "~reveal.js/css/reveal";
+// Default mixins and settings -----------------
+@import "~reveal.js/css/theme/template/mixins";
+@import "~reveal.js/css/theme/template/settings";
+// ---------------------------------------------
+// Include theme-specific fonts
+@import '~reveal.js/lib/font/source-sans-pro/source-sans-pro.css';
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+
+html * {
+  color-profile: sRGB;
+  rendering-intent: auto;
+}
+
+$orange: #ff5800;
+$red: #d52b1e;
+$yellow: #f9e300;
+$blue: #0065bd;
+$cyan: #009fda;
+
+$backgroundColor: #ffffff;
+$linkColor: $orange;
+$linkColorHover: $red;
+$controlsArrowAngle: 40;
+
+$headingFont: 'Source Sans Pro';
+$headingFontWeight: 600;
+
+// Theme template ------------------------------
+@import "~reveal.js/css/theme/template/theme";
+// ---------------------------------------------
+
+.slide-background {
+  &.title-slide {
+    background: $orange;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: calc(4vw + 30px + 3px);
+      background: #ffffff;
+    }
+  }
+
+  &:after {
+    content: 'Enschede';
+    background-image: url('./img/redned_vol.svg');
+    background-size: cover;
+    width: 15vw;
+    height: 4vw;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: .3em;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-left: 1.2vw;
+    padding-top: 3px;
+    color: $cyan;
+  }
+}
+
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 20px 0;
+  color: #fff;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: none;
+  text-shadow: none;
+  word-wrap: break-word;
+}
+
+
+.reveal section:not(.title-slide) h1,
+.reveal section:not(.title-slide) h2,
+.reveal section:not(.title-slide) h3,
+.reveal section:not(.title-slide) h4,
+.reveal section:not(.title-slide) h5,
+.reveal section:not(.title-slide) h6 {
+  color: $orange;
+}
+
