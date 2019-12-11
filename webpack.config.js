@@ -17,7 +17,6 @@ module.exports = {
   output: {
     filename: '[name]/index.js',
   },
-  watch: true,
   module: {
     rules: [
       {
