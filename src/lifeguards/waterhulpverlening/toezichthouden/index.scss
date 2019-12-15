@@ -1,0 +1,44 @@
+@import "../../../themes/reddingsbrigade";
+
+body {
+  color: #000000;
+  display: flex;
+
+  .reveal {
+    font-size: 30px;
+
+    .slide-background:after{
+      font-size: .75rem;
+    }
+
+    .slides {
+      z-index: 2;
+      margin-top: 1em;
+    }
+
+    a {
+      color: $cyan;
+    }
+
+    h1 {
+      color: $orange;
+      font-family: "Source Sans Pro", Helvetica, sans-serif;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: normal;
+      text-transform: none;
+      text-shadow: none;
+      word-wrap: break-word;
+      margin: 0 2.7rem 0;
+      font-size: 2em;
+    }
+
+    p {
+      margin: 2.7rem 2.7rem 0;
+    }
+
+    ul {
+      margin: 4% 2em 0;
+    }
+  }
+}

@@ -7,13 +7,18 @@ const devMode = process.env.NODE_ENV !== 'production'
 
 module.exports = {
   entry: {
+    'tailwind': './src/tailwind.js',
     'index': './src/index.js',
+    'lifeguards/waterhulpverlening/toezichthouden': './src/lifeguards/waterhulpverlening/toezichthouden/index.js',
     'lifeguards/waterhulpverlening/toezichthouden/gevaren': './src/lifeguards/waterhulpverlening/toezichthouden/gevaren/index.js',
+    'lifeguards/waterhulpverlening/toezichthouden/openWaterEnBeach': './src/lifeguards/waterhulpverlening/toezichthouden/openWaterEnBeach/index.js',
     'lifeguards/waterhulpverlening/toezichthouden/preventie': './src/lifeguards/waterhulpverlening/toezichthouden/preventie/index.js',
     'lifeguards/waterhulpverlening/toezichthouden/professionalisme': './src/lifeguards/waterhulpverlening/toezichthouden/professionalisme/index.js',
     'lifeguards/waterhulpverlening/toezichthouden/verdrinkingen': './src/lifeguards/waterhulpverlening/toezichthouden/professionalisme/index.js',
+    'lifeguards/waterhulpverlening/toezichthouden/zonesEnScannen': './src/lifeguards/waterhulpverlening/toezichthouden/zonesEnScannen/index.js',
+    'lifeguards/waterhulpverlening/toezichthouden/zwembad': './src/lifeguards/waterhulpverlening/toezichthouden/zwembad/index.js',
   },
-  mode: 'production',//change to 'development' for non minified js
+  mode: 'development',//change to 'development' for non minified js
   output: {
     filename: '[name]/index.js',
   },
@@ -48,6 +53,10 @@ module.exports = {
                   autoprefixer: {}
                 }
               },
+              plugins: [
+                require('tailwindcss'),
+                //require('autoprefixer'),
+              ],
               sourceMap: true
             }
           },
@@ -86,6 +95,16 @@ module.exports = {
           outputPath: 'images',
           publicPath: '/images'
         }
+      },
+      {
+        test: /\.(gif|png|jpe?g)$/i,
+        loader: 'file-loader',
+        exclude: /node_modules/,
+        options: {
+          name: '[name].[ext]]',
+          outputPath: 'images',
+          publicPath: '/images'
+        }
       }
     ],
   },
@@ -95,7 +114,7 @@ module.exports = {
       {
         inject: true,
         hash: true,
-        chunks: ['lifeguards/waterhulpverlening/toezichthouden/gevaren'],
+        chunks: ['lifeguards/waterhulpverlening/toezichthouden/gevaren', 'tailwind'],
         filename: 'lifeguards/waterhulpverlening/toezichthouden/gevaren/index.html',
         template: './src/lifeguards/waterhulpverlening/toezichthouden/gevaren/index.ejs'
       }
@@ -104,7 +123,16 @@ module.exports = {
       {
         inject: true,
         hash: true,
-        chunks: ['lifeguards/waterhulpverlening/toezichthouden/preventie'],
+        chunks: ['lifeguards/waterhulpverlening/toezichthouden/openWaterEnBeach', 'tailwind'],
+        filename: 'lifeguards/waterhulpverlening/toezichthouden/openWaterEnBeach/index.html',
+        template: './src/lifeguards/waterhulpverlening/toezichthouden/openWaterEnBeach/index.ejs'
+      }
+    ),
+    new HtmlWebpackPlugin(
+      {
+        inject: true,
+        hash: true,
+        chunks: ['lifeguards/waterhulpverlening/toezichthouden/preventie', 'tailwind'],
         filename: 'lifeguards/waterhulpverlening/toezichthouden/preventie/index.html',
         template: './src/lifeguards/waterhulpverlening/toezichthouden/preventie/index.ejs'
       }
@@ -113,7 +141,7 @@ module.exports = {
       {
         inject: true,
         hash: true,
-        chunks: ['lifeguards/waterhulpverlening/toezichthouden/professionalisme'],
+        chunks: ['lifeguards/waterhulpverlening/toezichthouden/professionalisme', 'tailwind'],
         filename: 'lifeguards/waterhulpverlening/toezichthouden/professionalisme/index.html',
         template: './src/lifeguards/waterhulpverlening/toezichthouden/professionalisme/index.ejs'
       }
@@ -122,15 +150,33 @@ module.exports = {
       {
         inject: true,
         hash: true,
-        chunks: ['lifeguards/waterhulpverlening/toezichthouden/verdrinkingen'],
+        chunks: ['lifeguards/waterhulpverlening/toezichthouden/verdrinkingen', 'tailwind'],
         filename: 'lifeguards/waterhulpverlening/toezichthouden/verdrinkingen/index.html',
         template: './src/lifeguards/waterhulpverlening/toezichthouden/verdrinkingen/index.ejs'
       }
     ),
     new HtmlWebpackPlugin(
       {
+        inject: true,
+        hash: true,
+        chunks: ['lifeguards/waterhulpverlening/toezichthouden/zonesEnScannen', 'tailwind'],
+        filename: 'lifeguards/waterhulpverlening/toezichthouden/zonesEnScannen/index.html',
+        template: './src/lifeguards/waterhulpverlening/toezichthouden/zonesEnScannen/index.ejs'
+      }
+    ),
+    new HtmlWebpackPlugin(
+      {
+        inject: true,
+        hash: true,
+        chunks: ['lifeguards/waterhulpverlening/toezichthouden/zwembad', 'tailwind'],
+        filename: 'lifeguards/waterhulpverlening/toezichthouden/zwembad/index.html',
+        template: './src/lifeguards/waterhulpverlening/toezichthouden/zwembad/index.ejs'
+      }
+    ),
+    new HtmlWebpackPlugin(
+      {
         title: 'Waterhulpverlening',
-        chunks: ['index'],
+        chunks: ['index', 'tailwind'],
         template: './src/lifeguards/waterhulpverlening/index.ejs',
         filename: 'lifeguards/waterhulpverlening/index.html',
         hash: true
@@ -139,7 +185,7 @@ module.exports = {
     new HtmlWebpackPlugin(
       {
         title: 'Waterhulpverlening - toezichthouden',
-        chunks: ['index'],
+        chunks: ['lifeguards/waterhulpverlening/toezichthouden', 'tailwind'],
         filename: 'lifeguards/waterhulpverlening/toezichthouden/index.html',
         template: './src/lifeguards/waterhulpverlening/toezichthouden/index.ejs',
         hash: true
@@ -148,7 +194,7 @@ module.exports = {
     new HtmlWebpackPlugin(
       {
         title: 'Danny\'s Presentation Library',
-        chunks: ['index'],
+        chunks: ['index', 'tailwind'],
         template: './src/index.ejs',
         hash: true
       }
