@@ -20,6 +20,7 @@ html * {
 $orange: #ff5800;
 $red: #d52b1e;
 $yellow: #f9e300;
+$yellowOrange: #eef163;
 $blue: #0065bd;
 $cyan: #009fda;
 
@@ -52,12 +53,21 @@ $headingFontWeight: 600;
     }
   }
 
+
+
   section {
     img {
       border: none;
-      @apply shadow-lg;
+      @apply shadow-none;
       background: none;
       margin: 0;
+    }
+
+    q{
+      color:#000000;
+      background: $yellowOrange;
+      padding: 5px;
+      display: block;
     }
   }
 
@@ -133,6 +143,20 @@ $headingFontWeight: 600;
     > li {
       margin: 0 0 14px;
       list-style-type: none;
+
+      &.plus:before {
+        content:'+';
+        color: $orange;
+        opacity: 1;
+        background: none;
+      }
+
+      &.minus:before {
+        content:'-';
+        color: $orange;
+        opacity: 1;
+        background: none;
+      }
 
       &:before {
         content: '';
