@@ -1931,6 +1931,15 @@ body{
   display:block
 }
 
+.reveal section .fragment.fade-in-then-out{
+  transition:height 2s, opacity 1s;
+  height:0
+}
+
+.reveal section .fragment.fade-in-then-out.current-fragment{
+  height:auto
+}
+
 .reveal .slide-background:before{
   content:'';
   display:block;
