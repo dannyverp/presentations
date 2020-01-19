@@ -1,7 +1,7 @@
 import * as reveal from '../../../../node_modules/reveal.js/js/reveal'
 
 require('./img/drowning.gif')
-reveal.initialize({ hash: true, width: 1080})
+reveal.initialize({hash: true, width: 1080, slideNumber: true})
 
 import Chart from 'chart.js'
 import ChartDataLabels from 'chartjs-plugin-datalabels'

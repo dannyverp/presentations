@@ -54,7 +54,6 @@ $headingFontWeight: 600;
   }
 
 
-
   section {
     img {
       border: none;
@@ -63,49 +62,59 @@ $headingFontWeight: 600;
       margin: 0;
     }
 
-    q{
-      color:#000000;
+    q {
+      color: #000000;
       background: $yellowOrange;
       padding: 5px;
       display: block;
     }
-  }
 
-    .slide-background {
-
-      &:before {
-        content: '';
-        display: block;
-        width: 100%;
-        border-bottom: 2px $orange solid;
-        height: 5.7rem;
-      }
-
-      &.title-slide {
-        background: $orange;
-
-        &:before {
-          background: #ffffff;
+    .fragment {
+      &.fade-in-then-out {
+        transition: height 2s, opacity 1s;
+        height: 0;
+        &.current-fragment {
+          height: auto;
         }
       }
+    }
+  }
 
-      &:after {
-        content: 'Enschede';
-        background-image: url('./img/redned_vol.svg');
-        background-size: cover;
-        width: 14rem;
-        height: 3.7rem;
-        position: fixed;
-        top: 1rem;
-        left: 2rem;
-        font-size: .3em;
-        display: inline-flex;
-        justify-content: flex-end;
-        flex-direction: column;
-        padding: 0 1.1rem;
-        color: $cyan;
+  .slide-background {
+
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      border-bottom: 2px $orange solid;
+      height: 5.7rem;
+    }
+
+    &.title-slide {
+      background: $orange;
+
+      &:before {
+        background: #ffffff;
       }
     }
+
+    &:after {
+      content: 'Enschede';
+      background-image: url('./img/redned_vol.svg');
+      background-size: cover;
+      width: 14rem;
+      height: 3.7rem;
+      position: fixed;
+      top: 1rem;
+      left: 2rem;
+      font-size: .3em;
+      display: inline-flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      padding: 0 1.1rem;
+      color: $cyan;
+    }
+  }
 
 
   /*********************************************
@@ -145,14 +154,14 @@ $headingFontWeight: 600;
       list-style-type: none;
 
       &.plus:before {
-        content:'+';
+        content: '+';
         color: $orange;
         opacity: 1;
         background: none;
       }
 
       &.minus:before {
-        content:'-';
+        content: '-';
         color: $orange;
         opacity: 1;
         background: none;
