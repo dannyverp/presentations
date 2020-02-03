@@ -2034,3 +2034,142 @@ body{
   margin-top:14px
 }
 
+.water{
+  background:linear-gradient(#90cdf4, #4299e1, #2a4365);
+  width:100%;
+  height:50vh;
+  display:block;
+  position:relative;
+  overflow:hidden
+}
+
+.water .redders-container{
+  height:100%
+}
+
+.water .covered{
+  position:absolute;
+  left:0;
+  width:0%;
+  height:100%;
+  background:rgba(0,255,0,0.4);
+  transition:width 1s linear !important
+}
+
+.water .covered.visible{
+  width:100%
+}
+
+.water .redders{
+  position:absolute;
+  left:0;
+  height:100%;
+  width:1.3em;
+  background:url(/images/redned.svg);
+  transition:left 1s linear !important
+}
+
+.water .redders.current-fragment{
+  left:100%
+}
+
+.water .redders.fragment{
+  opacity:1 !important;
+  visibility:inherit !important
+}
+
+.water .redders.half{
+  transition-delay:500ms !important;
+  height:60%
+}
+
+.water>.redders-container:not(.visible):first-child{
+  visibility:inherit;
+  opacity:1
+}
+
+.water__twice>.redders-container:last-child .covered{
+  right:0;
+  left:auto !important;
+  width:0;
+  bottom:0
+}
+
+.water__twice>.redders-container:last-child .covered.current-fragment{
+  width:100%
+}
+
+.water__twice>.redders-container:last-child .redders{
+  top:40%;
+  left:100%
+}
+
+.water__twice>.redders-container:last-child .redders.current-fragment{
+  visibility:inherit !important;
+  opacity:1;
+  left:-10%
+}
+
+.water__twice>.redders-container .covered{
+  height:60%;
+  transition-delay:500ms !important
+}
+
+.water__twice>.redders-container:not(.visible):first-child{
+  visibility:inherit;
+  opacity:1
+}
+
+.water__twice>.redders-container.visible:not(.current-fragment){
+  visibility:hidden !important
+}
+
+.water__breath .redders-container:nth-child(2)>.redders,.water__breath .redders-container:nth-child(2)>.covered{
+  left:30% !important
+}
+
+.water__breath .redders-container:nth-child(3)>.redders,.water__breath .redders-container:nth-child(3)>.covered{
+  left:60% !important
+}
+
+.water__breath .redders-container>.redders{
+  transition:top 1s linear !important;
+  top:0;
+  height:1.6em;
+  width:40%
+}
+
+.water__breath .redders-container>.redders.visible:not(.current-fragment){
+  visibility:hidden !important
+}
+
+.water__breath .redders-container>.redders.visible{
+  top:100%;
+  left:inherit
+}
+
+.water__breath .redders-container>.covered{
+  top:0;
+  width:40%;
+  height:0;
+  transition:height 900ms linear !important
+}
+
+.water__breath .redders-container>.covered.visible{
+  height:100%
+}
+
+.water__breath .redders-container:nth-child(even) .covered{
+  bottom:0;
+  top:inherit
+}
+
+.water__breath .redders-container:nth-child(even) .redders{
+  bottom:-1.6em;
+  top:calc(100% - 1.6em)
+}
+
+.water__breath .redders-container:nth-child(even) .redders.visible{
+  top:-1.6em
+}
+
