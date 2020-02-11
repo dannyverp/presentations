@@ -149,6 +149,10 @@ $headingFontWeight: 600;
 
   ul {
 
+    &.list-none > li:before {
+      display:none;
+    }
+
     > li {
       margin: 0 0 14px;
       list-style-type: none;
