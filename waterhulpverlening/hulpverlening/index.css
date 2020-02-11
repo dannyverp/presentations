@@ -1989,6 +1989,10 @@ body{
   color:#ff5800
 }
 
+.reveal ul.list-none>li:before{
+  display:none
+}
+
 .reveal ul>li{
   margin:0 0 14px;
   list-style-type:none
