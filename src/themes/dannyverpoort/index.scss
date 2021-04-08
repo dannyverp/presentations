@@ -1,0 +1,40 @@
+@import "tailwindcss/base";
+
+* {
+  @apply font-serif;
+}
+
+h1 {
+  @apply text-3xl font-bold;
+}
+h2 {
+  @apply text-xl font-bold;
+}
+h3 {
+  @apply text-lg font-bold;
+}
+a:not(.no-link) {
+  @apply text-orange-400;
+
+  &:hover {
+    @apply text-orange-600;
+  }
+}
+
+a.no-link {
+  @apply duration-500 ease-in-out scale-100;
+  &:hover {
+    @apply shadow-lg scale-150;
+  }
+}
+
+@import "tailwindcss/components";
+
+@import "main";
+@import "card";
+@import "pill";
+@import "socials";
+@import "button";
+
+@import "tailwindcss/utilities";
+

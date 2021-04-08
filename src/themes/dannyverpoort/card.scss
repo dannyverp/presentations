@@ -1,0 +1,40 @@
+.card {
+  @apply bg-white shadow-md rounded w-full mb-4 flex flex-col;
+
+  h1 {
+    @apply my-8 px-2 border-b-2 border-orange-300 inline text-gray-800;
+    width: fit-content;
+  }
+
+  article {
+    @apply flex flex-col p-4 w-full flex-1;
+
+    &:nth-child(even) {
+      @apply bg-gray-200 w-full;
+    }
+
+    p {
+      @apply font-normal my-3;
+      &:first-child {
+        @apply mt-0;
+      }
+    }
+  }
+
+  footer {
+    ul {
+      @apply flex text-gray-400 text-3xl w-full justify-around;
+    }
+  }
+
+  &__skills {
+    @apply shadow-none rounded-lg;
+    article {
+      @apply flex-row items-center;
+    }
+
+    aside {
+      @apply text-5xl pr-5;
+    }
+  }
+}

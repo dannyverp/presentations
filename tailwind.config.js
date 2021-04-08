@@ -7,6 +7,9 @@ module.exports = {
       '1/4': '90deg',
       '1/2': '180deg',
       '3/4': '270deg',
+    },
+    fontFamily: {
+      'serif': ['Oswald', 'Georgia', 'Cambria', "Times New Roman", 'Times', 'serif']
     }
   },
   plugins: [

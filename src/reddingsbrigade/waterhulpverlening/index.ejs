@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="apple-touch-icon" sizes="180x180"
+          href="<%= require('../../themes/reddingsbrigade/img/favicon/apple-touch-icon.png') %>">
+    <link rel="icon" type="image/png" sizes="32x32"
+          href="<%= require('../../themes/reddingsbrigade/img/favicon/favicon-32x32.png') %>">
+    <link rel="icon" type="image/png" sizes="16x16"
+          href="<%= require('../../themes/reddingsbrigade/img/favicon/favicon-16x16.png') %>">
+    <link rel="mask-icon" href="<%= require('../../themes/reddingsbrigade/img/favicon/safari-pinned-tab.svg') %>"
+          color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body class="main main--rb">
+<div class="container mx-auto flex">
+    <aside class="sidebar">
+        <div class="card">
+            <article>
+                <img src="<%= require('../../themes/reddingsbrigade/img/redned.svg') %>" alt="Danny Verpoort"
+                     class="profile-picture shadow-none">
+                <h1>Danny Verpoort</h1>
+                <p class="pill">Reddingsbrigade Instructeur</p>
+                <ul class="socials">
+                    <li><a href="https://www.linkedin.com/in/dannyverpoort/"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://medium.com/@dannyverpoort"><i class="fab fa-medium"></i></a></li>
+                    <li><a href="https://twitter.com/dannyverp"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="http://github.com/dannyverp/"><i class="fab fa-github-square"></i></a></li>
+                </ul>
+            </article>
+            <article>
+                <ul>
+                    <li><p><i class="fas fa-fw fa-city mr-3"></i> Eschede, Nederland</p></li>
+                    <li><p><i class="fas fa-fw fa-envelope-open-text mr-3"></i> hallo@dannyverpoort.nl</p></li>
+                    <li><p><i class="fas fa-fw fa-mobile-alt mr-3"></i> (+31) (0)53 569 8818</p></li>
+                    <li><p><i class="fas fa-fw fa-store-alt mr-3"></i> KvK 77449711</p></li>
+                    <li><p><i class="fas fa-fw fa-id-card-alt mr-3"></i> BTW NL003199391B04</p></li>
+                    <hr>
+                    <li><p><i class="fas fa-fw fa-language mr-3"></i> Nederlands</p></li>
+                    <li><p><i class="fas fa-fw fa-language mr-3"></i> Engels</p></li>
+                </ul>
+            </article>
+            <article class="download hidden">
+                <a href="#" class="button">
+                    <i class="fas fa-fw fa-download"></i> Download CV
+                </a>
+            </article>
+        </div>
+    </aside>
+    <main class="content">
+        <div class="card">
+            <article>
+                <h1><i class="fas fa-fw fa-graduation-cap text-orange-400"></i> Waterhulpverlening</h1>
+                <p>Hier vind je alle presentaties behorende bij de opleiding (junior/senior) lifeguard en
+                    specialisaties. Kies hieronder de onderwerpen die je wilt
+                    bezoeken:</p>
+            </article>
+            <article>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 row-gap-1">
+                    <div class="card card__skills">
+                        <a href="introductie" class="no-link p-3">
+                            <article class="p-o">
+                                <aside>
+                                    <i class="fas fa-fw fa-hands-helping text-orange-400"></i>
+                                </aside>
+                                <main>
+                                    <h2>Introductie</h2>
+                                    <p>Alles wat je moet weten over de waterhulpverlening opleiding</p>
+                                </main>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="card card__skills">
+                        <a href="toezichthouden" class="no-link p-3">
+                            <article class="p-o">
+                                <aside>
+                                    <i class="fas fa-fw fa-binoculars text-orange-400"></i>
+                                </aside>
+                                <main>
+                                    <h2>Toezichthouden</h2>
+                                    <p>Hoe hou je preventief de omgeving zo veilig mogelijk door middel van toezichthouden?</p>
+                                </main>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="card card__skills">
+                        <a href="hulpverlening" class="no-link p-3">
+                            <article class="p-o">
+                                <aside>
+                                    <i class="fas fa-fw fa-hand-holding-medical text-orange-400"></i>
+                                </aside>
+                                <main>
+                                    <h2>Verlenen van hulp bij een incident</h2>
+                                    <p>Hoe los je het beste een incident wat zich heeft voorgedaan op?</p>
+                                </main>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="card card__skills opacity-50">
+                        <a href="#" class="no-link p-3">
+                            <article class="p-o">
+                                <aside>
+                                    <i class="fas fa-fw fa-clipboard-list text-orange-400"></i>
+                                </aside>
+                                <main>
+                                    <h2>Postwerk</h2>
+                                    <p>Wat behoord er tot de dagelijkse bezigheden van een lifeguard?</p>
+                                </main>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="card card__skills opacity-50">
+                        <a href="#" class="no-link p-3">
+                            <article class="p-o">
+                                <aside>
+                                    <i class="fas fa-fw fa-comments text-orange-400"></i>
+                                </aside>
+                                <main>
+                                    <h2>Verzorgen van communicatie</h2>
+                                    <p>Welke communicatie middelen hebben wij tot onze beschikking en hoe ga je er mee om?</p>
+                                </main>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="card card__skills opacity-50">
+                        <a href="#" class="no-link p-3">
+                            <article class="p-o">
+                                <aside>
+                                    <i class="fas fa-fw fa-ad text-orange-400"></i>
+                                </aside>
+                                <main>
+                                    <h2>Promotionele activiteit</h2>
+                                    <p>Hoe kan je jouw vereniging zo goed mogelijk op de kaart zetten?</p>
+                                </main>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="card card__skills opacity-50">
+                        <a href="#" class="no-link p-3">
+                            <article class="p-o">
+                                <aside>
+                                    <i class="fas fa-fw fa-anchor text-orange-400"></i>
+                                </aside>
+                                <main>
+                                    <h2>Specialisatie schipper</h2>
+                                    <p>Specifieke informatie voor de (senior) lifeguard schipper kandidaten.</p>
+                                </main>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="card card__skills opacity-50">
+                        <a href="#" class="no-link p-3">
+                            <article class="p-o">
+                                <aside>
+                                    <i class="fas fa-fw fa-ambulance text-orange-400"></i>
+                                </aside>
+                                <main>
+                                    <h2>Specialisatie chauffeur</h2>
+                                    <p>Specifieke informatie voor de lifeguard chauffeur kandidaten.</p>
+                                </main>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <a href="/" class="card card__skills inline w-content no-link mb-3 py-1 pl-1 pr-3">
+                        <i class="fas fa-fw fa-home text-orange-400"></i> Home
+                    </a>
+                    <a href=".." class="card card__skills inline w-content no-link mb-3 ml-3 py-1 pl-1 pr-3">
+                        <i class="fas fa-fw fa-caret-left text-orange-400"></i> Terug
+                    </a>
+                </div>
+            </article>
+            <article>
+                <h1>Interesse?</h1>
+                <p>Kan ik u van dienst zijn bij een project? Neem contact met mij op via: <a
+                            href="mailto:hallo@dannyverpoort.nl">hallo@dannyverpoort.nl</a></p>
+            </article>
+        </div>
+    </main>
+</div>
+<footer class="text-center my-4 text-sm">
+    <p>&copy; Danny Verpoort &ndash; 2020</p>
+</footer>
+</body>
+</html>
