@@ -662,6 +662,14 @@ body.main{
   background-size:8rem
 }
 
+body.main--rb{
+  background-image:url(/images/rb_bg.png);
+  --bg-opacity: 1;
+  background-color: #fffaf0;
+  background-color: rgba(255, 250, 240, var(--bg-opacity));
+  background-position-x:-30px
+}
+
 div.container{
   flex-direction: column;
   margin-left: 0.5rem;
@@ -744,6 +752,10 @@ main.content{
 ul>li{
   margin-top: 0.75rem;
   margin-bottom: 0.75rem
+}
+
+.w-content{
+  width:fit-content !important
 }
 
 .card{

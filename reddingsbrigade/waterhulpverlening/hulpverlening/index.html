@@ -1,41 +1,236 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="/images/redned_orange.ico" type="image/svg"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>reddingsbrigade/waterhulpverlening - verlenen van hulp bij een incident</title>
-<link href="../../../tailwind/index.css?1b57be57b5f2a4c9514b" rel="stylesheet"><link href="../../../reddingsbrigade/waterhulpverlening/hulpverlening//index.css?1b57be57b5f2a4c9514b" rel="stylesheet"></head>
-<body>
-<div class="reveal">
-    <div class="slide-background present" style="display: block"></div>
-    <div class="slides text-left flex items-center">
-        <section class="present text-2xl text-left">
-            <h1>
-                Module Verlenen Van Hulp Bij Een Incident
-            </h1>
-            <p>Welkom bij de module verlenen van hulp bij een incident. In deze module leer je hoe je hulp kan verlenen als er een incident plaatsvind. We bekijken wat daarbij de grootste aandachtspunten zijn onderverdeeld in de volgende onderwerpen:</p>
-            <ul class="filelist ml-16">
-                <li class="text-gray-500"><a href="gevaren">Gevaren baders & zwemmers</a></li>
-                <li class="text-gray-500"><a href="waterhulpverlening">Waterhulpverlening</a></li>
-                <li class="text-gray-500"><a href="redden">Uitvoering van een redding</a></li>
-                <li class="text-gray-500"><a href="reddingsmiddelen">Reddingsmiddelen</a></li>
-                <li class="text-gray-500"><a href="grepen">Grepen</a></li>
-                <li class="text-gray-500"><a href="speciale reddingen">Speciale reddingen</a></li>
-            </ul>
-            <ul>
-                <li class="text-gray-500">Gebuik reddingsbrigadevaartuig</li>
-                <li class="text-gray-500"><a href="eerste hulp">Verlenen van eerste hulp</a></li>
-                <li class="text-gray-500"><a href="leidinggeven">Leidinggeven</a></li>
-                <li class="text-gray-500"><a href="communicatie">Communicatie</a></li>
-                <li class="text-gray-500"><a href="psychische hulp">Psychische hulp</a></li>
-                <li class="text-gray-500"><a href="rampen">Rampenbestrijding & multidisciplinaire inzet</a></li>
-            </ul>
-
-            <p><a href="/reddingsbrigade/waterhulpverlening/">< Terug naar het overzicht</a></p>
-
-        </section>
-    </div>
+    <link rel="apple-touch-icon" sizes="180x180"
+          href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+          href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+          href="/images/favicon-16x16.png">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg"
+          color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+<link href="../../../tailwind/index.css?9b91104c34f8a39890ac" rel="stylesheet"><link href="../../../reddingsbrigade/waterhulpverlening/hulpverlening//index.css?9b91104c34f8a39890ac" rel="stylesheet"></head>
+<body class="main main--rb">
+<div class="container mx-auto flex">
+    <aside class="sidebar">
+        <div class="card">
+            <article>
+                <img src="/images/redned.svg" alt="Danny Verpoort"
+                     class="profile-picture shadow-none">
+                <h1>Danny Verpoort</h1>
+                <p class="pill">Reddingsbrigade Instructeur</p>
+                <ul class="socials">
+                    <li><a href="https://www.linkedin.com/in/dannyverpoort/"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://medium.com/@dannyverpoort"><i class="fab fa-medium"></i></a></li>
+                    <li><a href="https://twitter.com/dannyverp"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="http://github.com/dannyverp/"><i class="fab fa-github-square"></i></a></li>
+                </ul>
+            </article>
+            <article>
+                <ul>
+                    <li><p><i class="fas fa-fw fa-city mr-3"></i> Eschede, Nederland</p></li>
+                    <li><p><i class="fas fa-fw fa-envelope-open-text mr-3"></i> hallo@dannyverpoort.nl</p></li>
+                    <li><p><i class="fas fa-fw fa-mobile-alt mr-3"></i> (+31) (0)53 569 8818</p></li>
+                    <li><p><i class="fas fa-fw fa-store-alt mr-3"></i> KvK 77449711</p></li>
+                    <li><p><i class="fas fa-fw fa-id-card-alt mr-3"></i> BTW NL003199391B04</p></li>
+                    <hr>
+                    <li><p><i class="fas fa-fw fa-language mr-3"></i> Nederlands</p></li>
+                    <li><p><i class="fas fa-fw fa-language mr-3"></i> Engels</p></li>
+                </ul>
+            </article>
+            <article class="download hidden">
+                <a href="#" class="button">
+                    <i class="fas fa-fw fa-download"></i> Download CV
+                </a>
+            </article>
+        </div>
+    </aside>
+    <main class="content">
+        <div class="card">
+            <article>
+                <h1><i class="fas fa-fw fa-hand-holding-medical text-orange-400"></i> Verlenen Van Hulp Bij Een Incident</h1>
+                <p>Welkom bij de module verlenen van hulp bij een incident. In deze module leer je hoe je hulp kan verlenen als er een incident plaatsvind. We bekijken wat daarbij de grootste aandachtspunten zijn onderverdeeld in de volgende onderwerpen:</p>
+            </article>
+            <article>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 row-gap-1">
+                    <div class="card card__skills">
+                        <a href="gevaren" class="no-link p-3">
+                            <article class="p-o">
+                                <aside>
+                                    <i class="fas fa-fw fa-exclamation-triangle text-orange-400"></i>
+                                </aside>
+                                <main>
+                                    <h2>Gevaren baders & zwemmers</h2>
+                                    <p>Wat zijn de gevaren die baders en zwemmers staan te wachten en wat kan jij daar tegen doen?</p>
+                                </main>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="card card__skills">
+                        <a href="waterhulpverlening" class="no-link p-3">
+                            <article class="p-o">
+                                <aside>
+                                    <i class="fas fa-fw fa-hand-holding-medical text-orange-400"></i>
+                                </aside>
+                                <main>
+                                    <h2>Waterhulpverlening</h2>
+                                    <p>Hoe ziet het process van een waterhulpverlening eruit en welke stappen doorloop je?</p>
+                                </main>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="card card__skills">
+                        <a href="redden" class="no-link p-3">
+                            <article class="p-o">
+                                <aside>
+                                    <i class="fas fa-fw fa-swimmer text-orange-400"></i>
+                                </aside>
+                                <main>
+                                    <h2>Uitvoering van een redding</h2>
+                                    <p>Welke technieken kan je gebruiken om een redding daadwerkelijk uit te voeren?</p>
+                                </main>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="card card__skills">
+                        <a href="reddingsmiddelen" class="no-link p-3">
+                            <article class="p-o">
+                                <aside>
+                                    <i class="fas fa-fw fa-life-ring text-orange-400"></i>
+                                </aside>
+                                <main>
+                                    <h2>Reddingsmiddelen</h2>
+                                    <p>Welke soorten reddingmiddelen hebben we tot onze bschikking en hoe gebruik je ze?</p>
+                                </main>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="card card__skills">
+                        <a href="grepen" class="no-link p-3">
+                            <article class="p-o">
+                                <aside>
+                                    <i class="fas fa-fw fa-user-shield text-orange-400"></i>
+                                </aside>
+                                <main>
+                                    <h2>Grepen</h2>
+                                    <p>Hoe bevrijden we ons uit een situatie waar de drenkeling ons vast grijpt?</p>
+                                </main>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="card card__skills">
+                        <a href="speciale%20reddingen" class="no-link p-3">
+                            <article class="p-o">
+                                <aside>
+                                    <i class="fas fa-fw fa-skating text-orange-400"></i>
+                                </aside>
+                                <main>
+                                    <h2>Speciale reddingen</h2>
+                                    <p>Waar hou je rekening mee bij een bijzonder redding (bijv. op ijs of in het donker)?</p>
+                                </main>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="card card__skills  opacity-50">
+                        <a href="#" class="no-link p-3">
+                            <article class="p-o">
+                                <aside>
+                                    <i class="fas fa-fw fa-anchor text-orange-400"></i>
+                                </aside>
+                                <main>
+                                    <h2>Gebuik reddingsbrigadevaartuig</h2>
+                                    <p>Hoe maak je gebruik van een reddingsbrigade vaartuig voor toezicht en reddingen?</p>
+                                </main>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="card card__skills">
+                        <a href="eerste%20hulp" class="no-link p-3">
+                            <article class="p-o">
+                                <aside>
+                                    <i class="fas fa-fw fa-briefcase-medical text-orange-400"></i>
+                                </aside>
+                                <main>
+                                    <h2>Verlenen van eerste hulp</h2>
+                                    <p>Welke eerste hulp kun je aan een drenkeling verlenen?</p>
+                                </main>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="card card__skills">
+                        <a href="leidinggeven" class="no-link p-3">
+                            <article class="p-o">
+                                <aside>
+                                    <i class="fas fa-fw fa-user-ninja text-orange-400"></i>
+                                </aside>
+                                <main>
+                                    <h2>Leidinggeven</h2>
+                                    <p>Wat houdt het leiding geven in tijdens het toezichthouden en tijdens een redding?</p>
+                                </main>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="card card__skills">
+                        <a href="communicatie" class="no-link p-3">
+                            <article class="p-o">
+                                <aside>
+                                    <i class="fas fa-fw fa-comments text-orange-400"></i>
+                                </aside>
+                                <main>
+                                    <h2>Communicatie</h2>
+                                    <p>Hoe communiceer je effectief tijdens een incident?</p>
+                                </main>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="card card__skills">
+                        <a href="psychische%20hulp" class="no-link p-3">
+                            <article class="p-o">
+                                <aside>
+                                    <i class="fas fa-fw fa-head-side-virus text-orange-400"></i>
+                                </aside>
+                                <main>
+                                    <h2>Psychische hulp</h2>
+                                    <p>Hoe zorg je voor elkaar en waar let je op na afloop van incidenten?</p>
+                                </main>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="card card__skills">
+                        <a href="rampen" class="no-link p-3">
+                            <article class="p-o">
+                                <aside>
+                                    <i class="fas fa-fw fa-house-damage text-orange-400"></i>
+                                </aside>
+                                <main>
+                                    <h2>Rampen & multidisciplinaire inzet</h2>
+                                    <p>Wat gebeurt er bij grotere incidenten en wat doet de NRV?</p>
+                                </main>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+                <a href=".." class="card card__skills inline w-content no-link mb-3 py-1 pl-1 pr-3">
+                    <i class="fas fa-fw fa-caret-left text-orange-400"></i> Terug
+                </a>
+            </article>
+            <article>
+                <h1>Interesse?</h1>
+                <p>Kan ik u van dienst zijn bij een project? Neem contact met mij op via: <a
+                            href="mailto:hallo@dannyverpoort.nl">hallo@dannyverpoort.nl</a></p>
+            </article>
+        </div>
+    </main>
 </div>
-
-<script type="text/javascript" src="../../../tailwind/index.js?1b57be57b5f2a4c9514b"></script><script type="text/javascript" src="../../../reddingsbrigade/waterhulpverlening/hulpverlening//index.js?1b57be57b5f2a4c9514b"></script></body>
+<footer class="text-center my-4 text-sm">
+    <p>&copy; Danny Verpoort &ndash; 2020</p>
+</footer>
+<script type="text/javascript" src="../../../tailwind/index.js?9b91104c34f8a39890ac"></script><script type="text/javascript" src="../../../reddingsbrigade/waterhulpverlening/hulpverlening//index.js?9b91104c34f8a39890ac"></script></body>
 </html>
