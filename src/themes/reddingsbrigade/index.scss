@@ -149,6 +149,10 @@ $headingFontWeight: 600;
 
   ul {
 
+    list-style-position: outside;
+    text-indent: -1em;
+    padding-left: 1em;
+
     &.list-none > li:before {
       display:none;
     }
