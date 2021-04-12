@@ -1998,6 +1998,12 @@ body{
   color:#ff5800
 }
 
+.reveal ul{
+  list-style-position:outside;
+  text-indent:-1em;
+  padding-left:1em
+}
+
 .reveal ul.list-none>li:before{
   display:none
 }
