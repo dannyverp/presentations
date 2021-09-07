@@ -12,6 +12,17 @@ module.exports = {
         'reddingsbrigade/': './src/reddingsbrigade/index.js',
         'reddingsbrigade/incidenten/': './src/reddingsbrigade/incidenten/index.js',
         'reddingsbrigade/waterhulpverlening/': './src/reddingsbrigade/waterhulpverlening/index.js',
+        'reddingsbrigade/lifesaver/': './src/reddingsbrigade/lifesaver/index.js',
+        'reddingsbrigade/lifesaver/gevaren/': './src/reddingsbrigade/lifesaver/gevaren/index.js',
+        'reddingsbrigade/lifesaver/grepen/': './src/reddingsbrigade/lifesaver/grepen/index.js',
+        'reddingsbrigade/lifesaver/introductie/': './src/reddingsbrigade/lifesaver/introductie/index.js',
+        'reddingsbrigade/lifesaver/leiding/': './src/reddingsbrigade/lifesaver/leiding/index.js',
+        'reddingsbrigade/lifesaver/redding/': './src/reddingsbrigade/lifesaver/redding/index.js',
+        'reddingsbrigade/lifesaver/reddingsmiddelen/': './src/reddingsbrigade/lifesaver/reddingsmiddelen/index.js',
+        'reddingsbrigade/lifesaver/speciaal/': './src/reddingsbrigade/lifesaver/speciaal/index.js',
+        'reddingsbrigade/lifesaver/strand/': './src/reddingsbrigade/lifesaver/strand/index.js',
+        'reddingsbrigade/lifesaver/verdrinkingen/': './src/reddingsbrigade/lifesaver/verdrinkingen/index.js',
+        'reddingsbrigade/lifesaver/waterhulpverlening/': './src/reddingsbrigade/lifesaver/waterhulpverlening/index.js',
         'reddingsbrigade/waterhulpverlening/introductie/': './src/reddingsbrigade/waterhulpverlening/introductie/index.js',
         'reddingsbrigade/waterhulpverlening/toezichthouden/': './src/reddingsbrigade/waterhulpverlening/toezichthouden/index.js',
         'reddingsbrigade/waterhulpverlening/toezichthouden/openWaterEnBeach/': './src/reddingsbrigade/waterhulpverlening/toezichthouden/openWaterEnBeach/index.js',
@@ -338,6 +349,105 @@ module.exports = {
                 chunks: ['reddingsbrigade/incidenten/', 'tailwind'],
                 filename: 'reddingsbrigade/incidenten/index.html',
                 template: './src/reddingsbrigade/incidenten/index.ejs'
+            }
+        ),
+        new HtmlWebpackPlugin(
+            {
+                inject: true,
+                hash: true,
+                chunks: ['reddingsbrigade/lifesaver/', 'tailwind'],
+                filename: 'reddingsbrigade/lifesaver/index.html',
+                template: './src/reddingsbrigade/lifesaver/index.ejs'
+            }
+        ),
+        new HtmlWebpackPlugin(
+            {
+                inject: true,
+                hash: true,
+                chunks: ['reddingsbrigade/lifesaver/gevaren/', 'tailwind'],
+                filename: 'reddingsbrigade/lifesaver/gevaren/index.html',
+                template: './src/reddingsbrigade/lifesaver/gevaren/index.ejs'
+            }
+        ),
+        new HtmlWebpackPlugin(
+            {
+                inject: true,
+                hash: true,
+                chunks: ['reddingsbrigade/lifesaver/grepen/', 'tailwind'],
+                filename: 'reddingsbrigade/lifesaver/grepen/index.html',
+                template: './src/reddingsbrigade/lifesaver/grepen/index.ejs'
+            }
+        ),
+        new HtmlWebpackPlugin(
+            {
+                inject: true,
+                hash: true,
+                chunks: ['reddingsbrigade/lifesaver/introductie/', 'tailwind'],
+                filename: 'reddingsbrigade/lifesaver/introductie/index.html',
+                template: './src/reddingsbrigade/lifesaver/introductie/index.ejs'
+            }
+        ),
+        new HtmlWebpackPlugin(
+            {
+                inject: true,
+                hash: true,
+                chunks: ['reddingsbrigade/lifesaver/leiding/', 'tailwind'],
+                filename: 'reddingsbrigade/lifesaver/leiding/index.html',
+                template: './src/reddingsbrigade/lifesaver/leiding/index.ejs'
+            }
+        ),
+        new HtmlWebpackPlugin(
+            {
+                inject: true,
+                hash: true,
+                chunks: ['reddingsbrigade/lifesaver/redding/', 'tailwind'],
+                filename: 'reddingsbrigade/lifesaver/redding/index.html',
+                template: './src/reddingsbrigade/lifesaver/redding/index.ejs'
+            }
+        ),
+        new HtmlWebpackPlugin(
+            {
+                inject: true,
+                hash: true,
+                chunks: ['reddingsbrigade/lifesaver/reddingsmiddelen/', 'tailwind'],
+                filename: 'reddingsbrigade/lifesaver/reddingsmiddelen/index.html',
+                template: './src/reddingsbrigade/lifesaver/reddingsmiddelen/index.ejs'
+            }
+        ),
+        new HtmlWebpackPlugin(
+            {
+                inject: true,
+                hash: true,
+                chunks: ['reddingsbrigade/lifesaver/speciaal/', 'tailwind'],
+                filename: 'reddingsbrigade/lifesaver/speciaal/index.html',
+                template: './src/reddingsbrigade/lifesaver/speciaal/index.ejs'
+            }
+        ),
+        new HtmlWebpackPlugin(
+            {
+                inject: true,
+                hash: true,
+                chunks: ['reddingsbrigade/lifesaver/strand/', 'tailwind'],
+                filename: 'reddingsbrigade/lifesaver/strand/index.html',
+                template: './src/reddingsbrigade/lifesaver/strand/index.ejs'
+            }
+        ),
+        new HtmlWebpackPlugin(
+            {
+                inject: true,
+                hash: true,
+                chunks: ['reddingsbrigade/lifesaver/verdrinkingen/', 'tailwind'],
+                filename: 'reddingsbrigade/lifesaver/verdrinkingen/index.html',
+                template: './src/reddingsbrigade/lifesaver/verdrinkingen/index.ejs'
+            }
+        ),
+        new HtmlWebpackPlugin(
+            {
+                inject: true,
+                hash: true,
+                chunks: ['reddingsbrigade/lifesaver/waterhulpverlening/', 'tailwind'],
+                filename: 'reddingsbrigade/lifesaver/waterhulpverlening/index.html',
+                template: './src/reddingsbrigade/lifesaver/waterhulpverlening/index.ejs'
             }
         ),
         new HtmlWebpackTagsPlugin({
