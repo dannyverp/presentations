@@ -1,7 +1,7 @@
 import * as reveal from 'reveal.js'
 import ChartDataLabels from 'chartjs-plugin-datalabels'
 
-reveal.initialize({hash: true, width:1080});
+reveal.initialize({hash: true, width: 1080, slideNumber: true});
 
 import './index.scss'
 import Chart from 'chart.js'

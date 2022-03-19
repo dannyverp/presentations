@@ -2,7 +2,7 @@ import * as reveal from 'reveal.js'
 import Chart from 'chart.js'
 import ChartDataLabels from 'chartjs-plugin-datalabels'
 
-reveal.initialize({ hash: true, width: 1080, slideNumber: true })
+reveal.initialize({hash: true, width: 1080, slideNumber: true})
 
 reveal.addEventListener('fragmentshown', function (event) {
   console.log(event.fragment)
