@@ -1,36 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
-/* http://meyerweb.com/eric/tools/css/reset/
-   v4.0 | 20180602
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-main, menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, main, menu, nav, section {
-  display: block;
-}
 @font-face {
   font-family: 'Source Sans Pro';
 
@@ -86,23 +54,99 @@ footer, header, hgroup, main, menu, nav, section {
 
   font-style: italic;
 }
-/*!
- * reveal.js
- * http://revealjs.com
- * MIT licensed
- *
- * Copyright (C) 2020 Hakim El Hattab, http://hakim.se
- */
 
-html{
+.reveal .stretch,.reveal .r-stretch{
+  max-width:none;
+  max-height:none
+}
+
+.reveal pre.stretch code,.reveal pre.r-stretch code{
+  height:100%;
+  max-height:100%;
+  box-sizing:border-box
+}
+
+.reveal .r-fit-text{
+  display:inline-block;
+  white-space:nowrap
+}
+
+.reveal .r-stack{
+  display:grid
+}
+
+.reveal .r-stack>*{
+  grid-area:1/1;
+  margin:auto
+}
+
+.reveal .r-vstack,.reveal .r-hstack{
+  display:flex
+}
+
+.reveal .r-vstack img,.reveal .r-vstack video,.reveal .r-hstack img,.reveal .r-hstack video{
+  min-width:0;
+  min-height:0;
+  object-fit:contain
+}
+
+.reveal .r-vstack{
+  flex-direction:column;
+  align-items:center;
+  justify-content:center
+}
+
+.reveal .r-hstack{
+  flex-direction:row;
+  align-items:center;
+  justify-content:center
+}
+
+.reveal .items-stretch{
+  align-items:stretch
+}
+
+.reveal .items-start{
+  align-items:flex-start
+}
+
+.reveal .items-center{
+  align-items:center
+}
+
+.reveal .items-end{
+  align-items:flex-end
+}
+
+.reveal .justify-between{
+  justify-content:space-between
+}
+
+.reveal .justify-around{
+  justify-content:space-around
+}
+
+.reveal .justify-start{
+  justify-content:flex-start
+}
+
+.reveal .justify-center{
+  justify-content:center
+}
+
+.reveal .justify-end{
+  justify-content:flex-end
+}
+
+html.reveal-full-page{
   width:100%;
   height:100%;
   height:100vh;
-  height:calc( var(--vh, 1vh) * 100 );
+  height:calc(var(--vh, 1vh)*100);
   overflow:hidden
 }
 
-body{
+.reveal-viewport{
   height:100%;
   overflow:hidden;
   position:relative;
@@ -112,15 +156,28 @@ body{
   color:#000
 }
 
+.reveal-viewport:fullscreen{
+  top:0 !important;
+  left:0 !important;
+  width:100% !important;
+  height:100% !important;
+  transform:none !important
+}
+
 .reveal .slides section .fragment{
   opacity:0;
   visibility:hidden;
-  transition:all .2s ease
+  transition:all .2s ease;
+  will-change:opacity
 }
 
 .reveal .slides section .fragment.visible{
   opacity:1;
   visibility:inherit
+}
+
+.reveal .slides section .fragment.disabled{
+  transition:none
 }
 
 .reveal .slides section .fragment.grow{
@@ -277,17 +334,6 @@ body{
   position:relative
 }
 
-.reveal .stretch{
-  max-width:none;
-  max-height:none
-}
-
-.reveal pre.stretch code{
-  height:100%;
-  max-height:100%;
-  box-sizing:border-box
-}
-
 @keyframes bounce-right{
   0%,10%,25%,40%,50%{
     transform:translateX(0)
@@ -299,6 +345,20 @@ body{
 
   30%{
     transform:translateX(-5px)
+  }
+}
+
+@keyframes bounce-left{
+  0%,10%,25%,40%,50%{
+    transform:translateX(0)
+  }
+
+  20%{
+    transform:translateX(-10px)
+  }
+
+  30%{
+    transform:translateX(5px)
   }
 }
 
@@ -398,6 +458,10 @@ body{
   transform:translateX(-10px)
 }
 
+.reveal .controls .navigate-left.highlight{
+  animation:bounce-left 2s 50 both ease-out
+}
+
 .reveal .controls .navigate-right{
   right:0;
   bottom:3.2em;
@@ -437,15 +501,15 @@ body{
   animation:bounce-down 2s 50 both ease-out
 }
 
-.reveal .controls[data-controls-back-arrows=faded] .navigate-left.enabled,.reveal .controls[data-controls-back-arrows=faded] .navigate-up.enabled{
+.reveal .controls[data-controls-back-arrows=faded] .navigate-up.enabled{
   opacity:.3
 }
 
-.reveal .controls[data-controls-back-arrows=faded] .navigate-left.enabled:hover,.reveal .controls[data-controls-back-arrows=faded] .navigate-up.enabled:hover{
+.reveal .controls[data-controls-back-arrows=faded] .navigate-up.enabled:hover{
   opacity:1
 }
 
-.reveal .controls[data-controls-back-arrows=hidden] .navigate-left.enabled,.reveal .controls[data-controls-back-arrows=hidden] .navigate-up.enabled{
+.reveal .controls[data-controls-back-arrows=hidden] .navigate-up.enabled{
   opacity:0;
   visibility:hidden
 }
@@ -463,6 +527,32 @@ body{
 
 .reveal .controls .enabled:hover,.reveal .controls .enabled.fragmented:hover{
   opacity:1
+}
+
+.reveal:not(.rtl) .controls[data-controls-back-arrows=faded] .navigate-left.enabled{
+  opacity:.3
+}
+
+.reveal:not(.rtl) .controls[data-controls-back-arrows=faded] .navigate-left.enabled:hover{
+  opacity:1
+}
+
+.reveal:not(.rtl) .controls[data-controls-back-arrows=hidden] .navigate-left.enabled{
+  opacity:0;
+  visibility:hidden
+}
+
+.reveal.rtl .controls[data-controls-back-arrows=faded] .navigate-right.enabled{
+  opacity:.3
+}
+
+.reveal.rtl .controls[data-controls-back-arrows=faded] .navigate-right.enabled:hover{
+  opacity:1
+}
+
+.reveal.rtl .controls[data-controls-back-arrows=hidden] .navigate-right.enabled{
+  opacity:0;
+  visibility:hidden
 }
 
 .reveal[data-navigation-mode=linear].has-horizontal-slides .navigate-up,.reveal[data-navigation-mode=linear].has-horizontal-slides .navigate-down{
@@ -537,7 +627,7 @@ body{
   }
 
   .reveal .controls[data-controls-layout=edges] .navigate-down{
-    bottom:-0.3em;
+    bottom:-.3em;
     left:50%;
     margin-left:-1.8em
   }
@@ -567,9 +657,11 @@ body{
 .reveal .progress span{
   display:block;
   height:100%;
-  width:0px;
+  width:100%;
   background-color:currentColor;
-  transition:width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985)
+  transition:transform 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transform-origin:0 0;
+  transform:scaleX(0)
 }
 
 .reveal .slide-number{
@@ -602,6 +694,10 @@ body{
   touch-action:pinch-zoom
 }
 
+.reveal.embedded{
+  touch-action:pan-y
+}
+
 .reveal .slides{
   position:absolute;
   width:100%;
@@ -627,7 +723,6 @@ body{
   display:none;
   position:absolute;
   width:100%;
-  padding:20px 0px;
   pointer-events:auto;
   z-index:10;
   transform-style:flat;
@@ -671,7 +766,7 @@ body{
   min-height:0 !important
 }
 
-.reveal .slides>section.future,.reveal .slides>section>section.future,.reveal .slides>section.past,.reveal .slides>section>section.past{
+.reveal .slides>section:not(.present),.reveal .slides>section>section:not(.present){
   pointer-events:none
 }
 
@@ -681,10 +776,6 @@ body{
 
 .reveal .slides>section.past,.reveal .slides>section.future,.reveal .slides>section>section.past,.reveal .slides>section>section.future{
   opacity:0
-}
-
-.reveal.slide section{
-  backface-visibility:hidden
 }
 
 .reveal .slides>section[data-transition=slide].past,.reveal .slides>section[data-transition~=slide-out].past,.reveal.slide .slides>section:not([data-transition]).past{
@@ -701,10 +792,6 @@ body{
 
 .reveal .slides>section>section[data-transition=slide].future,.reveal .slides>section>section[data-transition~=slide-in].future,.reveal.slide .slides>section>section:not([data-transition]).future{
   transform:translate(0, 150%)
-}
-
-.reveal.linear section{
-  backface-visibility:hidden
 }
 
 .reveal .slides>section[data-transition=linear].past,.reveal .slides>section[data-transition~=linear-out].past,.reveal.linear .slides>section:not([data-transition]).past{
@@ -992,43 +1079,12 @@ body{
   opacity:1
 }
 
-.no-transforms{
-  overflow-y:auto
-}
-
-.no-transforms .reveal{
-  overflow:visible
-}
-
-.no-transforms .reveal .slides{
-  position:relative;
-  width:80%;
-  max-width:1280px;
-  height:auto;
-  top:0;
-  margin:0 auto;
-  text-align:center
-}
-
-.no-transforms .reveal .controls,.no-transforms .reveal .progress{
-  display:none
-}
-
-.no-transforms .reveal .slides section{
-  display:block;
-  opacity:1;
-  position:relative;
-  height:auto;
-  min-height:0;
-  top:0;
-  left:0;
-  margin:10vh 0;
-  margin:70px 0;
-  transform:none
-}
-
-.reveal .no-transition,.reveal .no-transition *{
+.reveal .no-transition,.reveal .no-transition *,.reveal .slides.disable-slide-transitions section{
   transition:none !important
+}
+
+.reveal .slides.disable-slide-transitions section{
+  transform:none !important
 }
 
 .reveal .backgrounds{
@@ -1091,94 +1147,93 @@ body{
   object-fit:contain
 }
 
-.reveal[data-background-transition=none]>.backgrounds .slide-background,.reveal>.backgrounds .slide-background[data-background-transition=none]{
+.reveal[data-background-transition=none]>.backgrounds .slide-background:not([data-background-transition]),.reveal>.backgrounds .slide-background[data-background-transition=none]{
   transition:none
 }
 
-.reveal[data-background-transition=slide]>.backgrounds .slide-background,.reveal>.backgrounds .slide-background[data-background-transition=slide]{
-  opacity:1;
-  backface-visibility:hidden
+.reveal[data-background-transition=slide]>.backgrounds .slide-background:not([data-background-transition]),.reveal>.backgrounds .slide-background[data-background-transition=slide]{
+  opacity:1
 }
 
-.reveal[data-background-transition=slide]>.backgrounds .slide-background.past,.reveal>.backgrounds .slide-background.past[data-background-transition=slide]{
+.reveal[data-background-transition=slide]>.backgrounds .slide-background.past:not([data-background-transition]),.reveal>.backgrounds .slide-background.past[data-background-transition=slide]{
   transform:translate(-100%, 0)
 }
 
-.reveal[data-background-transition=slide]>.backgrounds .slide-background.future,.reveal>.backgrounds .slide-background.future[data-background-transition=slide]{
+.reveal[data-background-transition=slide]>.backgrounds .slide-background.future:not([data-background-transition]),.reveal>.backgrounds .slide-background.future[data-background-transition=slide]{
   transform:translate(100%, 0)
 }
 
-.reveal[data-background-transition=slide]>.backgrounds .slide-background>.slide-background.past,.reveal>.backgrounds .slide-background>.slide-background.past[data-background-transition=slide]{
+.reveal[data-background-transition=slide]>.backgrounds .slide-background>.slide-background.past:not([data-background-transition]),.reveal>.backgrounds .slide-background>.slide-background.past[data-background-transition=slide]{
   transform:translate(0, -100%)
 }
 
-.reveal[data-background-transition=slide]>.backgrounds .slide-background>.slide-background.future,.reveal>.backgrounds .slide-background>.slide-background.future[data-background-transition=slide]{
+.reveal[data-background-transition=slide]>.backgrounds .slide-background>.slide-background.future:not([data-background-transition]),.reveal>.backgrounds .slide-background>.slide-background.future[data-background-transition=slide]{
   transform:translate(0, 100%)
 }
 
-.reveal[data-background-transition=convex]>.backgrounds .slide-background.past,.reveal>.backgrounds .slide-background.past[data-background-transition=convex]{
+.reveal[data-background-transition=convex]>.backgrounds .slide-background.past:not([data-background-transition]),.reveal>.backgrounds .slide-background.past[data-background-transition=convex]{
   opacity:0;
   transform:translate3d(-100%, 0, 0) rotateY(-90deg) translate3d(-100%, 0, 0)
 }
 
-.reveal[data-background-transition=convex]>.backgrounds .slide-background.future,.reveal>.backgrounds .slide-background.future[data-background-transition=convex]{
+.reveal[data-background-transition=convex]>.backgrounds .slide-background.future:not([data-background-transition]),.reveal>.backgrounds .slide-background.future[data-background-transition=convex]{
   opacity:0;
   transform:translate3d(100%, 0, 0) rotateY(90deg) translate3d(100%, 0, 0)
 }
 
-.reveal[data-background-transition=convex]>.backgrounds .slide-background>.slide-background.past,.reveal>.backgrounds .slide-background>.slide-background.past[data-background-transition=convex]{
+.reveal[data-background-transition=convex]>.backgrounds .slide-background>.slide-background.past:not([data-background-transition]),.reveal>.backgrounds .slide-background>.slide-background.past[data-background-transition=convex]{
   opacity:0;
   transform:translate3d(0, -100%, 0) rotateX(90deg) translate3d(0, -100%, 0)
 }
 
-.reveal[data-background-transition=convex]>.backgrounds .slide-background>.slide-background.future,.reveal>.backgrounds .slide-background>.slide-background.future[data-background-transition=convex]{
+.reveal[data-background-transition=convex]>.backgrounds .slide-background>.slide-background.future:not([data-background-transition]),.reveal>.backgrounds .slide-background>.slide-background.future[data-background-transition=convex]{
   opacity:0;
   transform:translate3d(0, 100%, 0) rotateX(-90deg) translate3d(0, 100%, 0)
 }
 
-.reveal[data-background-transition=concave]>.backgrounds .slide-background.past,.reveal>.backgrounds .slide-background.past[data-background-transition=concave]{
+.reveal[data-background-transition=concave]>.backgrounds .slide-background.past:not([data-background-transition]),.reveal>.backgrounds .slide-background.past[data-background-transition=concave]{
   opacity:0;
   transform:translate3d(-100%, 0, 0) rotateY(90deg) translate3d(-100%, 0, 0)
 }
 
-.reveal[data-background-transition=concave]>.backgrounds .slide-background.future,.reveal>.backgrounds .slide-background.future[data-background-transition=concave]{
+.reveal[data-background-transition=concave]>.backgrounds .slide-background.future:not([data-background-transition]),.reveal>.backgrounds .slide-background.future[data-background-transition=concave]{
   opacity:0;
   transform:translate3d(100%, 0, 0) rotateY(-90deg) translate3d(100%, 0, 0)
 }
 
-.reveal[data-background-transition=concave]>.backgrounds .slide-background>.slide-background.past,.reveal>.backgrounds .slide-background>.slide-background.past[data-background-transition=concave]{
+.reveal[data-background-transition=concave]>.backgrounds .slide-background>.slide-background.past:not([data-background-transition]),.reveal>.backgrounds .slide-background>.slide-background.past[data-background-transition=concave]{
   opacity:0;
   transform:translate3d(0, -100%, 0) rotateX(-90deg) translate3d(0, -100%, 0)
 }
 
-.reveal[data-background-transition=concave]>.backgrounds .slide-background>.slide-background.future,.reveal>.backgrounds .slide-background>.slide-background.future[data-background-transition=concave]{
+.reveal[data-background-transition=concave]>.backgrounds .slide-background>.slide-background.future:not([data-background-transition]),.reveal>.backgrounds .slide-background>.slide-background.future[data-background-transition=concave]{
   opacity:0;
   transform:translate3d(0, 100%, 0) rotateX(90deg) translate3d(0, 100%, 0)
 }
 
-.reveal[data-background-transition=zoom]>.backgrounds .slide-background,.reveal>.backgrounds .slide-background[data-background-transition=zoom]{
+.reveal[data-background-transition=zoom]>.backgrounds .slide-background:not([data-background-transition]),.reveal>.backgrounds .slide-background[data-background-transition=zoom]{
   transition-timing-function:ease
 }
 
-.reveal[data-background-transition=zoom]>.backgrounds .slide-background.past,.reveal>.backgrounds .slide-background.past[data-background-transition=zoom]{
+.reveal[data-background-transition=zoom]>.backgrounds .slide-background.past:not([data-background-transition]),.reveal>.backgrounds .slide-background.past[data-background-transition=zoom]{
   opacity:0;
   visibility:hidden;
   transform:scale(16)
 }
 
-.reveal[data-background-transition=zoom]>.backgrounds .slide-background.future,.reveal>.backgrounds .slide-background.future[data-background-transition=zoom]{
+.reveal[data-background-transition=zoom]>.backgrounds .slide-background.future:not([data-background-transition]),.reveal>.backgrounds .slide-background.future[data-background-transition=zoom]{
   opacity:0;
   visibility:hidden;
   transform:scale(0.2)
 }
 
-.reveal[data-background-transition=zoom]>.backgrounds .slide-background>.slide-background.past,.reveal>.backgrounds .slide-background>.slide-background.past[data-background-transition=zoom]{
+.reveal[data-background-transition=zoom]>.backgrounds .slide-background>.slide-background.past:not([data-background-transition]),.reveal>.backgrounds .slide-background>.slide-background.past[data-background-transition=zoom]{
   opacity:0;
   visibility:hidden;
   transform:scale(16)
 }
 
-.reveal[data-background-transition=zoom]>.backgrounds .slide-background>.slide-background.future,.reveal>.backgrounds .slide-background>.slide-background.future[data-background-transition=zoom]{
+.reveal[data-background-transition=zoom]>.backgrounds .slide-background>.slide-background.future:not([data-background-transition]),.reveal>.backgrounds .slide-background>.slide-background.future[data-background-transition=zoom]{
   opacity:0;
   visibility:hidden;
   transform:scale(0.2)
@@ -1190,6 +1245,14 @@ body{
 
 .reveal[data-transition-speed=slow]>.backgrounds .slide-background{
   transition-duration:1200ms
+}
+
+.reveal [data-auto-animate-target^=unmatched]{
+  will-change:opacity
+}
+
+.reveal section[data-auto-animate]:not(.stack):not([data-auto-animate=running]) [data-auto-animate-target^=unmatched]{
+  opacity:0
 }
 
 .reveal.overview{
@@ -1271,7 +1334,7 @@ body{
 }
 
 .reveal.rtl .progress span{
-  float:right
+  transform-origin:100% 0
 }
 
 .reveal.has-parallax-background .backgrounds{
@@ -1294,14 +1357,7 @@ body{
   height:100%;
   z-index:1000;
   background:rgba(0,0,0,.9);
-  opacity:0;
-  visibility:hidden;
   transition:all .3s ease
-}
-
-.reveal>.overlay.visible{
-  opacity:1;
-  visibility:visible
 }
 
 .reveal>.overlay .spinner{
@@ -1324,9 +1380,9 @@ body{
   left:0;
   top:0;
   width:100%;
-  height:40px;
+  padding:5px;
   z-index:2;
-  border-bottom:1px solid #222
+  box-sizing:border-box
 }
 
 .reveal>.overlay header a{
@@ -1364,7 +1420,7 @@ body{
 .reveal>.overlay .viewport{
   position:absolute;
   display:flex;
-  top:40px;
+  top:50px;
   right:0;
   bottom:0;
   left:0
@@ -1461,6 +1517,10 @@ body{
   visibility:hidden
 }
 
+.reveal .hljs{
+  min-height:100%
+}
+
 .reveal .hljs table{
   margin:initial
 }
@@ -1487,6 +1547,14 @@ body{
   left:0;
   width:100%;
   box-sizing:border-box
+}
+
+.reveal pre[data-auto-animate-target]{
+  overflow:hidden
+}
+
+.reveal pre[data-auto-animate-target] code{
+  height:100%
 }
 
 .reveal .roll{
@@ -1600,7 +1668,6 @@ body{
     top:100%;
     left:0;
     width:100%;
-    height:42.8571428571%;
     height:30vh;
     border:0
   }
@@ -1614,7 +1681,6 @@ body{
 
   .reveal.show-notes .speaker-notes{
     top:100%;
-    height:66.6666666667%;
     height:40vh
   }
 
@@ -1639,32 +1705,366 @@ body{
   visibility:hidden
 }
 
+html.print-pdf *{
+  -webkit-print-color-adjust:exact
+}
+
+html.print-pdf{
+  width:100%;
+  height:100%;
+  overflow:visible
+}
+
+html.print-pdf body{
+  margin:0 auto !important;
+  border:0;
+  padding:0;
+  float:none !important;
+  overflow:visible
+}
+
+html.print-pdf .nestedarrow,html.print-pdf .reveal .controls,html.print-pdf .reveal .progress,html.print-pdf .reveal .playback,html.print-pdf .reveal.overview,html.print-pdf .state-background{
+  display:none !important
+}
+
+html.print-pdf .reveal pre code{
+  overflow:hidden !important;
+  font-family:Courier,"Courier New",monospace !important
+}
+
+html.print-pdf .reveal{
+  width:auto !important;
+  height:auto !important;
+  overflow:hidden !important
+}
+
+html.print-pdf .reveal .slides{
+  position:static;
+  width:100% !important;
+  height:auto !important;
+  zoom:1 !important;
+  pointer-events:initial;
+  left:auto;
+  top:auto;
+  margin:0 !important;
+  padding:0 !important;
+  overflow:visible;
+  display:block;
+  perspective:none;
+  perspective-origin:50% 50%
+}
+
+html.print-pdf .reveal .slides .pdf-page{
+  position:relative;
+  overflow:hidden;
+  z-index:1;
+  page-break-after:always
+}
+
+html.print-pdf .reveal .slides section{
+  visibility:visible !important;
+  display:block !important;
+  position:absolute !important;
+  margin:0 !important;
+  padding:0 !important;
+  box-sizing:border-box !important;
+  min-height:1px;
+  opacity:1 !important;
+  transform-style:flat !important;
+  transform:none !important
+}
+
+html.print-pdf .reveal section.stack{
+  position:relative !important;
+  margin:0 !important;
+  padding:0 !important;
+  page-break-after:avoid !important;
+  height:auto !important;
+  min-height:auto !important
+}
+
+html.print-pdf .reveal img{
+  box-shadow:none
+}
+
+html.print-pdf .reveal .backgrounds{
+  display:none
+}
+
+html.print-pdf .reveal .slide-background{
+  display:block !important;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:auto !important
+}
+
+html.print-pdf .reveal.show-notes{
+  max-width:none;
+  max-height:none
+}
+
+html.print-pdf .reveal .speaker-notes-pdf{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:none;
+  top:auto;
+  right:auto;
+  bottom:auto;
+  left:auto;
+  z-index:100
+}
+
+html.print-pdf .reveal .speaker-notes-pdf[data-layout=separate-page]{
+  position:relative;
+  color:inherit;
+  background-color:transparent;
+  padding:20px;
+  page-break-after:always;
+  border:0
+}
+
+html.print-pdf .reveal .slide-number-pdf{
+  display:block;
+  position:absolute;
+  font-size:14px
+}
+
+html.print-pdf .aria-status{
+  display:none
+}
+
+@media print{
+  html:not(.print-pdf){
+    background:#fff;
+    width:auto;
+    height:auto;
+    overflow:visible
+  }
+
+  html:not(.print-pdf) body{
+    background:#fff;
+    font-size:20pt;
+    width:auto;
+    height:auto;
+    border:0;
+    margin:0 5%;
+    padding:0;
+    overflow:visible;
+    float:none !important
+  }
+
+  html:not(.print-pdf) .nestedarrow,html:not(.print-pdf) .controls,html:not(.print-pdf) .fork-reveal,html:not(.print-pdf) .share-reveal,html:not(.print-pdf) .state-background,html:not(.print-pdf) .reveal .progress,html:not(.print-pdf) .reveal .backgrounds,html:not(.print-pdf) .reveal .slide-number{
+    display:none !important
+  }
+
+  html:not(.print-pdf) body,html:not(.print-pdf) p,html:not(.print-pdf) td,html:not(.print-pdf) li{
+    font-size:20pt !important;
+    color:#000
+  }
+
+  html:not(.print-pdf) h1,html:not(.print-pdf) h2,html:not(.print-pdf) h3,html:not(.print-pdf) h4,html:not(.print-pdf) h5,html:not(.print-pdf) h6{
+    color:#000 !important;
+    height:auto;
+    line-height:normal;
+    text-align:left;
+    letter-spacing:normal
+  }
+
+  html:not(.print-pdf) h1{
+    font-size:28pt !important
+  }
+
+  html:not(.print-pdf) h2{
+    font-size:24pt !important
+  }
+
+  html:not(.print-pdf) h3{
+    font-size:22pt !important
+  }
+
+  html:not(.print-pdf) h4{
+    font-size:22pt !important;
+    font-variant:small-caps
+  }
+
+  html:not(.print-pdf) h5{
+    font-size:21pt !important
+  }
+
+  html:not(.print-pdf) h6{
+    font-size:20pt !important;
+    font-style:italic
+  }
+
+  html:not(.print-pdf) a:link,html:not(.print-pdf) a:visited{
+    color:#000 !important;
+    font-weight:bold;
+    text-decoration:underline
+  }
+
+  html:not(.print-pdf) ul,html:not(.print-pdf) ol,html:not(.print-pdf) div,html:not(.print-pdf) p{
+    visibility:visible;
+    position:static;
+    width:auto;
+    height:auto;
+    display:block;
+    overflow:visible;
+    margin:0;
+    text-align:left !important
+  }
+
+  html:not(.print-pdf) .reveal pre,html:not(.print-pdf) .reveal table{
+    margin-left:0;
+    margin-right:0
+  }
+
+  html:not(.print-pdf) .reveal pre code{
+    padding:20px
+  }
+
+  html:not(.print-pdf) .reveal blockquote{
+    margin:20px 0
+  }
+
+  html:not(.print-pdf) .reveal .slides{
+    position:static !important;
+    width:auto !important;
+    height:auto !important;
+    left:0 !important;
+    top:0 !important;
+    margin-left:0 !important;
+    margin-top:0 !important;
+    padding:0 !important;
+    zoom:1 !important;
+    transform:none !important;
+    overflow:visible !important;
+    display:block !important;
+    text-align:left !important;
+    perspective:none;
+    perspective-origin:50% 50%
+  }
+
+  html:not(.print-pdf) .reveal .slides section{
+    visibility:visible !important;
+    position:static !important;
+    width:auto !important;
+    height:auto !important;
+    display:block !important;
+    overflow:visible !important;
+    left:0 !important;
+    top:0 !important;
+    margin-left:0 !important;
+    margin-top:0 !important;
+    padding:60px 20px !important;
+    z-index:auto !important;
+    opacity:1 !important;
+    page-break-after:always !important;
+    transform-style:flat !important;
+    transform:none !important;
+    transition:none !important
+  }
+
+  html:not(.print-pdf) .reveal .slides section.stack{
+    padding:0 !important
+  }
+
+  html:not(.print-pdf) .reveal section:last-of-type{
+    page-break-after:avoid !important
+  }
+
+  html:not(.print-pdf) .reveal section .fragment{
+    opacity:1 !important;
+    visibility:visible !important;
+    transform:none !important
+  }
+
+  html:not(.print-pdf) .reveal section img{
+    display:block;
+    margin:15px 0px;
+    background:#fff;
+    border:1px solid #666;
+    box-shadow:none
+  }
+
+  html:not(.print-pdf) .reveal section small{
+    font-size:.8em
+  }
+
+  html:not(.print-pdf) .reveal .hljs{
+    max-height:100%;
+    white-space:pre-wrap;
+    word-wrap:break-word;
+    word-break:break-word;
+    font-size:15pt
+  }
+
+  html:not(.print-pdf) .reveal .hljs .hljs-ln-numbers{
+    white-space:nowrap
+  }
+
+  html:not(.print-pdf) .reveal .hljs td{
+    font-size:inherit !important;
+    color:inherit !important
+  }
+}
+
 html *{
   color-profile:sRGB;
   rendering-intent:auto
 }
 
-body{
+:root{
+  --r-background-color: #ffffff;
+  --r-main-font: Lato, sans-serif;
+  --r-main-font-size: 40px;
+  --r-main-color: #009fda;
+  --r-block-margin: 20px;
+  --r-heading-margin: 0 0 20px 0;
+  --r-heading-font: Source Sans Pro;
+  --r-heading-color: #eee;
+  --r-heading-line-height: 1.2;
+  --r-heading-letter-spacing: normal;
+  --r-heading-text-transform: uppercase;
+  --r-heading-text-shadow: none;
+  --r-heading-font-weight: 600;
+  --r-heading1-text-shadow: none;
+  --r-heading1-size: 3.77em;
+  --r-heading2-size: 2.11em;
+  --r-heading3-size: 1.55em;
+  --r-heading4-size: 1em;
+  --r-code-font: monospace;
+  --r-link-color: #ff5800;
+  --r-link-color-dark: #b33e00;
+  --r-link-color-hover: #d52b1e;
+  --r-selection-background-color: #FF5E99;
+  --r-selection-color: #fff
+}
+
+.reveal-viewport{
   background:#fff;
-  background-color:#fff
+  background-color:var(--r-background-color)
 }
 
 .reveal{
-  font-family:"Lato",sans-serif;
-  font-size:40px;
+  font-family:var(--r-main-font);
+  font-size:var(--r-main-font-size);
   font-weight:normal;
-  color:#009fda
+  color:var(--r-main-color)
 }
 
-::selection{
-  color:#fff;
-  background:#ff5e99;
+.reveal ::selection{
+  color:var(--r-selection-color);
+  background:var(--r-selection-background-color);
   text-shadow:none
 }
 
-::-moz-selection{
-  color:#fff;
-  background:#ff5e99;
+.reveal ::-moz-selection{
+  color:var(--r-selection-color);
+  background:var(--r-selection-background-color);
   text-shadow:none
 }
 
@@ -1674,40 +2074,44 @@ body{
 }
 
 .reveal h1,.reveal h2,.reveal h3,.reveal h4,.reveal h5,.reveal h6{
-  margin:0 0 20px 0;
-  color:#eee;
-  font-family:"Source Sans Pro";
-  font-weight:600;
-  line-height:1.2;
-  letter-spacing:normal;
-  text-transform:uppercase;
-  text-shadow:none;
+  margin:var(--r-heading-margin);
+  color:var(--r-heading-color);
+  font-family:var(--r-heading-font);
+  font-weight:var(--r-heading-font-weight);
+  line-height:var(--r-heading-line-height);
+  letter-spacing:var(--r-heading-letter-spacing);
+  text-transform:var(--r-heading-text-transform);
+  text-shadow:var(--r-heading-text-shadow);
   word-wrap:break-word
 }
 
 .reveal h1{
-  font-size:3.77em
+  font-size:var(--r-heading1-size)
 }
 
 .reveal h2{
-  font-size:2.11em
+  font-size:var(--r-heading2-size)
 }
 
 .reveal h3{
-  font-size:1.55em
+  font-size:var(--r-heading3-size)
 }
 
 .reveal h4{
-  font-size:1em
+  font-size:var(--r-heading4-size)
 }
 
 .reveal h1{
-  text-shadow:none
+  text-shadow:var(--r-heading1-text-shadow)
 }
 
 .reveal p{
-  margin:20px 0;
+  margin:var(--r-block-margin) 0;
   line-height:1.3
+}
+
+.reveal h1:last-child,.reveal h2:last-child,.reveal h3:last-child,.reveal h4:last-child,.reveal h5:last-child,.reveal h6:last-child{
+  margin-bottom:0
 }
 
 .reveal img,.reveal video,.reveal iframe{
@@ -1762,7 +2166,7 @@ body{
   display:block;
   position:relative;
   width:70%;
-  margin:20px auto;
+  margin:var(--r-block-margin) auto;
   padding:5px;
   font-style:italic;
   background:rgba(255,255,255,.05);
@@ -1781,18 +2185,19 @@ body{
   display:block;
   position:relative;
   width:90%;
-  margin:20px auto;
+  margin:var(--r-block-margin) auto;
   text-align:left;
   font-size:.55em;
-  font-family:monospace;
+  font-family:var(--r-code-font);
   line-height:1.2em;
   word-wrap:break-word;
   box-shadow:0px 5px 15px rgba(0,0,0,.15)
 }
 
 .reveal code{
-  font-family:monospace;
-  text-transform:none
+  font-family:var(--r-code-font);
+  text-transform:none;
+  tab-size:2
 }
 
 .reveal pre code{
@@ -1801,6 +2206,14 @@ body{
   overflow:auto;
   max-height:400px;
   word-wrap:normal
+}
+
+.reveal .code-wrapper{
+  white-space:normal
+}
+
+.reveal .code-wrapper code{
+  white-space:pre
 }
 
 .reveal table{
@@ -1852,67 +2265,53 @@ body{
   vertical-align:top
 }
 
+.reveal img{
+  margin:var(--r-block-margin) 0
+}
+
 .reveal a{
-  color:#ff5800;
+  color:var(--r-link-color);
   text-decoration:none;
-  -webkit-transition:color .15s ease;
-  -moz-transition:color .15s ease;
   transition:color .15s ease
 }
 
 .reveal a:hover{
-  color:#d52b1e;
+  color:var(--r-link-color-hover);
   text-shadow:none;
   border:none
 }
 
 .reveal .roll span:after{
   color:#fff;
-  background:#b33e00
+  background:var(--r-link-color-dark)
 }
 
-.reveal section img{
-  margin:15px 0px;
-  background:rgba(255,255,255,.12);
-  border:4px solid #009fda;
+.reveal .r-frame{
+  border:4px solid var(--r-main-color);
   box-shadow:0 0 10px rgba(0,0,0,.15)
 }
 
-.reveal section img.plain{
-  border:0;
-  box-shadow:none
-}
-
-.reveal a img{
-  -webkit-transition:all .15s linear;
-  -moz-transition:all .15s linear;
+.reveal a .r-frame{
   transition:all .15s linear
 }
 
-.reveal a:hover img{
-  background:rgba(255,255,255,.2);
-  border-color:#ff5800;
+.reveal a:hover .r-frame{
+  border-color:var(--r-link-color);
   box-shadow:0 0 20px rgba(0,0,0,.55)
 }
 
 .reveal .controls{
-  color:#ff5800
+  color:var(--r-link-color)
 }
 
 .reveal .progress{
   background:rgba(0,0,0,.2);
-  color:#ff5800
-}
-
-.reveal .progress span{
-  -webkit-transition:width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
-  -moz-transition:width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
-  transition:width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985)
+  color:var(--r-link-color)
 }
 
 @media print{
   .backgrounds{
-    background-color:#fff
+    background-color:var(--r-background-color)
   }
 }
 
