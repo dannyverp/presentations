@@ -10,10 +10,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
+      -  uses: actions/setup-node@v2
+         with:
+           node-version: '16.14.2'
+
       - name: Build
         run: |
-          npm install
-          npm run-script build
+          yarn install
+          yarn run build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
