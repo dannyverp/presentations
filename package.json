@@ -37,7 +37,7 @@
     "@fortawesome/fontawesome-free": "^5.15.3",
     "chart.js": "^2.9.3",
     "chartjs-plugin-datalabels": "^0.7.0",
-    "reveal.js": "^3.8.0",
+    "reveal.js": "^4.3.0",
     "sass": "^1.32.8"
   }
 }
