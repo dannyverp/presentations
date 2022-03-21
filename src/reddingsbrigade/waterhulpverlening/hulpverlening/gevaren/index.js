@@ -1,4 +1,4 @@
-import * as reveal from 'reveal.js'
+import reveal from 'reveal.js'
 import Chart from 'chart.js'
 import ChartDataLabels from 'chartjs-plugin-datalabels'
 

@@ -2,14 +2,13 @@
  * Solarized Light theme for reveal.js.
  * Author: Achim Staebler
  */
-@import "~reveal.js/css/reset.css";
 @import "~reveal.js/css/reveal";
 // Default mixins and settings -----------------
 @import "~reveal.js/css/theme/template/mixins";
 @import "~reveal.js/css/theme/template/settings";
 // ---------------------------------------------
 // Include theme-specific fonts
-@import '~reveal.js/lib/font/source-sans-pro/source-sans-pro.css';
+@import '~reveal.js/dist/theme/fonts/source-sans-pro/source-sans-pro.css';
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 
 html * {

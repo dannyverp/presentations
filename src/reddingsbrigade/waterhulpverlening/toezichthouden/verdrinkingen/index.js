@@ -1,4 +1,4 @@
-import * as reveal from 'reveal.js'
+import reveal from 'reveal.js'
 
 require('./img/drowning.gif')
 reveal.initialize({hash: true, width: 1080, slideNumber: true})

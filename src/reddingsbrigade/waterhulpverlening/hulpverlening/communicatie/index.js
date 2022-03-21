@@ -1,4 +1,4 @@
-import * as reveal from 'reveal.js'
+import reveal from 'reveal.js'
 
 console.log('Reveal')
 

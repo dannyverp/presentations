@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const devMode = process.env.NODE_ENV !== 'production'
 
 module.exports = {
+    stats: 'errors-only',
     entry: {
         'tailwind': './src/tailwind.js',
         'index': './src/index.js',
@@ -47,6 +48,11 @@ module.exports = {
     mode: 'development',//change to 'development' for non minified js
     output: {
         filename: '[name]/index.js',
+    },
+    devServer: {
+        compress: false,
+        host: "0.0.0.0",
+        port: 8080,
     },
     module: {
         rules: [
