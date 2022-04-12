@@ -2,22 +2,155 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-	<link rel="shortcut icon" href="/images/redned_orange.ico" type="image/svg" />
-    <title>Lifesaver - Reddingen</title>
+    <link rel="shortcut icon" href="/images/redned_orange.ico" type="image/svg"/>
+    <title>Redding uitvoeren</title>
 </head>
 <body>
 <div class="reveal">
     <div class="slides">
         <section class="title-slide">
             <h2>
-                Uitvoeren van een redding
+                Uitvoering van een redding
             </h2>
-            <h3>
-
-            </h3>
         </section>
         <section>
-            <h3><a href="../grepen/">Volgende presentatie ></a></h3>
+            <h3>Te water gaan</h3>
+            <ul>
+                <li>Voorzichtig te water gaan</li>
+                <li>Schredesprong</li>
+                <li>Rechtstandige sprong</li>
+            </ul>
+            <ul>
+                <li>Compact jump</li>
+                <li>Wadend</li>
+                <li>Startsprong</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Voorzichtig te water gaan</h3>
+            <div class="flex">
+                <p class="w-2/3 px-4 -mx-4 text-left">Als je niet zeker weet hoe diep het water is of denkt dat er
+                    misschien
+                    gevaarlijke voorwerpen onder water liggen.</p>
+                <img class="w-1/3 px-4 -mx-4" src="<%= require('./img/voorzichtig.png') %>" alt="">
+            </div>
+        </section>
+        <section>
+            <h3>Schredesprong</h3>
+            <div class="flex">
+                <div class="w-2/3 px-4 -mx-4 text-left">
+                    <p>Uitvoeren als je niet te diep in het water wilt zakken en alleen bij diep genoeg water</p>
+                    <p>Deze manier is uitermate geschikt voor zwemvliezen</p>
+                </div>
+                <img src="<%= require('./img/schrede.png') %>" alt="" class="w-1/3 px-4 -mx-4">
+            </div>
+        </section>
+        <section>
+            <h3>Rechtstandige Sprong</h3>
+            <div class="flex">
+                <p class="w-2/3 px-4 -mx-4 text-left">De rechtstandige sprong gebruik je als je van een lage hoogte
+                    springt en je zeker weet dat het water diep genoeg is.</p>
+                <img src="<%= require('./img/compact.png') %>" alt="" class="w-1/3 px-4 -mx-4">
+            </div>
+        </section>
+        <section>
+            <h3>Compact Jump</h3>
+            <div class="flex">
+                <p class="w-2/3 px-4 -mx-4 text-left">De compact jump gebruik je bij grotere hoogte als je zeker weet
+                    dat het water
+                    diep
+                    genoeg is</p>
+                <img src="<%= require('./img/compact.png') %>" alt="" class="w-1/3 px-4 -mx-4">
+            </div>
+        </section>
+        <section>
+            <h3>Wadend te water</h3>
+            <div class="flex">
+                <div class="w-2/3 px-4 -mx-4 text-left">
+                    <p>Ga bij een glooiing wadend te water.</p>
+                    <p>Gebruik bij onbekend en ondoorzichtig water eventueel een stok om voor je uit te verkennen</p>
+                </div>
+                <img src="<%= require('./img/wadend.png') %>" alt="" class="w-1/3 px-4 -mx-4">
+            </div>
+        </section>
+        <section>
+            <h3>Startsprong</h3>
+            <div class="flex">
+                <p class="w-2/3 px-4 -mx-4 text-left">Alleen in het zwembad bij water waar het diep genoeg is</p>
+                <img src="<%= require('./img/startsprong.png') %>" alt="" class="w-1/3 px-4 -mx-4">
+            </div>
+        </section>
+        <section>
+            <h3>Zoeken naar een drenkeling</h3>
+            <p>Begin altijd met het zo nauwkeurig mogelijk bepalen van de plek waar de drenkeling voor het laatst is
+                gezien.</p>
+        </section>
+        <section>
+            <h3>Zoeken in ondiep water</h3>
+            <ul>
+                <li>In een keer over de lengte</li>
+                <li>In twee keer over de lengte</li>
+                <li>Over breedte</li>
+            </ul>
+        </section>
+        <section>
+            <h3>In een keer over de lengte</h3>
+            <div class="water mx-auto">
+                <div class="redders-container fragment" data-fragment-index="0">
+                    <div class="redders fragment" data-fragment-index="0"></div>
+                    <div class="covered fragment" data-fragment-index="0"></div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h3>In twee keer over de lengte</h3>
+            <div class="water water__twice mx-auto">
+                <div class="redders-container fragment" data-fragment-index="0">
+                    <div class="redders half fragment" data-fragment-index="0"></div>
+                    <div class="covered fragment" data-fragment-index="0"></div>
+                </div>
+                <div class="redders-container fragment" data-fragment-index="1">
+                    <div class="redders half fragment" data-fragment-index="1"></div>
+                    <div class="covered fragment" data-fragment-index="1"></div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h3>Over de breedte</h3>
+            <div class="water water__breath">
+                <div class="redders-container fragment" data-fragment-index="0">
+                    <div class="redders half fragment" data-fragment-index="0"></div>
+                    <div class="covered fragment" data-fragment-index="0"></div>
+                </div>
+                <div class="redders-container fragment" data-fragment-index="1">
+                    <div class="redders half fragment" data-fragment-index="1"></div>
+                    <div class="covered fragment" data-fragment-index="1"></div>
+                </div>
+                <div class="redders-container fragment" data-fragment-index="2">
+                    <div class="redders half fragment" data-fragment-index="2"></div>
+                    <div class="covered fragment" data-fragment-index="2"></div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h3>Diep water</h3>
+            <ol>
+                <li>Vorm een rij met gezicht naar de kant</li>
+                <li>Maak een hoekduik, zoek met 1 arm, bescherm je hoofd met de ander</li>
+                <li>Draai om en zoek vanaf de kant naar het diepe</li>
+                <li>Overlap telkens het zoekgebied door:
+                <ul><li>Telkens wat achteruit te gaan</li>
+                <li>Onder elkaar door te zoeken</li></ul></li>
+            </ol>
+        </section>
+        <section class="text-centerf">
+            <h3>Diep water</h3>
+            <div class="flex justify-center">
+            <img src="<%= require('./img/diepzoeken.png') %>" alt="">
+            </div>
+        </section>
+        <section>
+            <h3><a href="../grepen">Grepen ></a></h3>
             <h4><a href="..">Terug naar het overzicht ></a></h4>
         </section>
     </div>
